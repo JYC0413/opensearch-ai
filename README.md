@@ -1,20 +1,37 @@
-## OpenSearch GPT
+# OpenSearch GPT with Gaia
 
-A personalised AI search engine that learns about you and your interests as you browse the web.
+This is a simplified version of the project, supporting the use of local models.
 
-It's like a perplexity / searchGPT clone, but for _you_.
+## Installation Steps
 
-![screenshot](https://opensearch-ai.pages.dev/screenshot.png)
+1. Clone the repository:
 
-### Powered by
+   ```bash
+   git clone https://github.com/your-username/your-repository-name.git
+   cd your-repository-name
 
-- [Mem0](https://mem0.ai) - Automatic memory collection and retrival
-- [Vercel AI ADK](https://github.com/vercel/ai) - A framework for building AI applications
-- [Next.js](https://nextjs.org/) - The React Framework
-- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
-- [Shadcn UI](https://tailwindui.com/) - A set of completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS
-- [Cobe](https://github.com/shuding/cobe) - Globe animation
-- [GPT-4o-mini](https://openai.com)
-- [Cloudflare Pages](https://pages.cloudflare.com/) - A platform for building and deploying web applications
+2. Install dependencies:
 
-Built by [Supermemory.ai](https://supermemory.ai) team.
+    Using Yarn:
+    ```bash
+    yarn install
+    ```
+    Or using npm:
+    ```bash
+    npm install
+    ```
+
+3. Configure environment variables:
+    ```bash
+    cp .env.example .env
+    ```
+   
+## Starting the Project
+Using Yarn:
+```bash
+yarn dev
+```
+Or using npm:
+```bash
+npm run dev
+```

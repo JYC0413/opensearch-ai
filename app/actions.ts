@@ -5,32 +5,8 @@ import { BingResults } from "./types";
 import { revalidatePath } from "next/cache";
 
 export const getSearchResultsFromMemory = async (
-  query: string,
-  user: Session | null
+  query: string
 ): Promise<BingResults | null> => {
-  if (!query || !user?.user) return null;
-
-  try {
-    await fetch("https://api.mem0.ai/v1/memories/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Token ${process.env.MEM0_API_KEY}`,
-      },
-      body: JSON.stringify({
-        messages: [
-          {
-            role: "user",
-            content: query,
-          },
-        ],
-        user_id: user?.user?.email,
-      }),
-    });
-  } catch (e) {
-    console.error("Error creating memory", e);
-  }
-
   const response = await fetch(
     "https://api.search.brave.com/res/v1/web/search?q=" +
       encodeURIComponent(query),

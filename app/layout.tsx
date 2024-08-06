@@ -8,7 +8,7 @@ const milling = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Open Search GPT",
+  title: "Open Search GPT with Gaia",
   description: "Open-source SearchGPT, but better.",
   icons: {
     icon: "/logo.png",
