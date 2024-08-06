@@ -8,11 +8,21 @@ import {
   CredenzaTrigger,
 } from '@/components/ui/credenza';
 import DOMPurify from 'dompurify';
+import {BingResults} from "@/app/types";
+
+interface SearchResult {
+  url: string;
+  meta_url: {
+    favicon: string;
+  };
+  description: string;
+  title: string;
+}
 
 export default function WebReferences({
   searchResults,
 }: {
-  searchResults: any;
+  searchResults: BingResults;
 }) {
   const extractDomain = (url: string) => {
     try {
@@ -28,7 +38,7 @@ export default function WebReferences({
       <Credenza>
         <div className="flex flex-col gap-2 mb-4">
           <div className="flex flex-row gap-4 overflow-x-auto mt-4">
-            {searchResults?.web.results.slice(0, 6).map((item, index) => (
+            {searchResults?.web.results.slice(0, 6).map((item:SearchResult, index) => (
               <div
                 key={`SearchResults-${index}`}
                 className="bg-white border border-neutral-400 backdrop-blur-md rounded-xl bg-opacity-30 w-96 flex flex-col gap-4 p-2"
