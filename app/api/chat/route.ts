@@ -12,7 +12,7 @@ export const POST = async (request: Request): Promise<Response> => {
   }
 
   const openai = createOpenAI({
-    baseURL:process.env.LLAMAEDGE_BASE_URL
+    baseURL:process.env.LLAMAEDGE_BASE_URL || "https://llama.us.gaianet.network/v1"
   });
 
   const messages: CoreMessage[] = [
@@ -32,7 +32,7 @@ export const POST = async (request: Request): Promise<Response> => {
   ];
 
   const stream = await streamText({
-    model: openai(process.env.LLAMAEDGE_MODEL_NAME),
+    model: openai(process.env.LLAMAEDGE_MODEL_NAME || "llama"),
     messages: messages,
   });
 
