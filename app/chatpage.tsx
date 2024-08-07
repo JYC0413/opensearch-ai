@@ -107,7 +107,7 @@ function ChatPage() {
         <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
           <div className="flex flex-col gap-4 w-full lg:flex-row lg:items-center lg:justify-between">
             <a
-              href="https://github.com/JYC0413/opensearch-ai"
+              href="https://github.com/second-state/opensearch-ai"
               className="flex items-center justify-between gap-4 border-b border-gray-300 pb-6 pt-4 lg:static lg:w-auto lg:border-none lg:bg-transparent lg:p-0"
             >
               Open source{' '}
